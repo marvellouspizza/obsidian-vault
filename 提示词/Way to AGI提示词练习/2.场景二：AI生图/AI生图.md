@@ -1,0 +1,55 @@
+**1.从零生图 (Text-to-Image)**
+S-E-L-C 结构强制模型按层渲染
+- **Subject (主体)**：核心物体 + 材质 + 颜色 + 姿态。
+- **Environment (环境)**：地理位置 + 背景元素 + 空间关系。
+- **Lighting (布光)**：主光方向 + 辅助光类型 (如 Rim light, Volumetric lighting)。
+- **Camera (镜头)**：焦段 (85mm, 35mm) + 角度 (Low angle, Overhead) + 景深 (f/1.8)。 
+   
+**原提示词：**
+**Subject** ：A translucent glass sculpture of a lion, intricate crystal texture, refraction visible. 
+**Environment** ：Placed on a dark obsidian pedestal in a minimalist gallery.
+**Lighting** ：Sharp spotlight from above, creating caustic patterns on the floor. **Camera** ：Macro shot, 100mm lens, shallow depth of field focused on the lion's eye.
+
+
+**自行设计的提示词：**
+**Subject** ：一只半透明玻璃淡粉色龙形雕塑，有着复杂的水晶纹理，可见折射效果。
+**Environment**：放置在干净的白色背景上
+**Lighting** ：光线强烈，强调透明度和光泽感。
+**Camera** ：100mm微距镜头，大光圈 (f/2.8)，极高锐度，纯净无噪点
+画面1:1
+
+**2.生成一组风格统一的图标或插画：**
+**反编译** 为结构化的 JSON 提示词
+Analyze this image and break it down into a JSON format with the following keys: "composition", "lighting", "color_palette", "subject_style", "negative_constraints".
+**JSON 提示词**（3份）
+{
+  "composition": "居中构图，3/4 侧视视角展示龙的全景，俯视角度，纯净的极简白色背景，物体下方带有柔和的投影，强调空间感和立体感。",
+  "lighting": "专业摄影棚布光，高调照明，光线透过晶体产生复杂的折射和色散效果（虹彩光晕），具有明显的焦散（Caustics）光影投射在地面上，高光边缘锐利且通透。",
+  "color_palette": ["柔和的玫瑰粉色 (Soft Rose Pink)", "晶莹剔透的淡粉 (Translucent Pale Pink)", "彩虹色折射光 (Iridescent Prism Highlights)", "纯净白 (Clean White Background)"],
+  "subject_style": "中国龙造型的水晶雕塑，材质呈现冰裂纹或内部生长的晶体质感，细节极其精致（鳞片、龙须、背鳍），整体呈现出一种高端奢华、半透明的玻璃工艺品美学。",
+  "negative_constraints": "背景杂乱，阴影过重，色彩暗淡，材质不透明，模糊，噪点，低分辨率，比例失调。"
+}
+
+> [!龙]
+> ![[Gemini_Generated_Image_fo8aeofo8aeofo8a.png]]
+
+{
+  "composition": "居中构图，3/4 侧视视角展示龙的全景，俯视角度，纯净的极简白色背景，物体下方带有柔和的投影，强调空间感和立体感。",
+  "lighting": "专业摄影棚布光，高调照明，光线透过晶体产生复杂的折射和色散效果（虹彩光晕），具有明显的焦散（Caustics）光影投射在地面上，高光边缘锐利且通透。",
+  "color_palette": ["柔和的紫色 ", "晶莹剔透的淡紫 (Translucent Pale Purple)", "彩虹色折射光 (Iridescent Prism Highlights)", "纯净白 (Clean White Background)"],
+  "subject_style": "马造型的水晶雕塑，材质呈现冰裂纹或内部生长的晶体质感，细节极其精致，整体呈现出一种高端奢华、半透明的玻璃工艺品美学。",
+  "negative_constraints": "背景杂乱，阴影过重，色彩暗淡，材质不透明，模糊，噪点，低分辨率"
+}比例1:1。
+> [!马]
+> ![[Gemini_Generated_Image_cbx1t6cbx1t6cbx1.png]]
+
+{
+  "composition": "居中构图，3/4 侧视视角展示龙的全景，俯视角度，纯净的极简白色背景，物体下方带有柔和的投影，强调空间感和立体感。",
+  "lighting": "专业摄影棚布光，高调照明，光线透过晶体产生复杂的折射和色散效果（虹彩光晕），具有明显的焦散（Caustics）光影投射在地面上，高光边缘锐利且通透。",
+  "color_palette": ["柔和的蓝色 ", "晶莹剔透的蓝色 (Translucent Pale blue)", "彩虹色折射光 (Iridescent Prism Highlights)", "纯净白 (Clean White Background)"],
+  "subject_style": "兔子造型的水晶雕塑，材质呈现冰裂纹或内部生长的晶体质感，细节极其精致，整体呈现出一种高端奢华、半透明的玻璃工艺品美学。",
+  "negative_constraints": "背景杂乱，阴影过重，色彩暗淡，材质不透明，模糊，噪点，低分辨率，比例失调。"
+}图片比例1:1
+
+>[!兔]
+![[Gemini_Generated_Image_9jxi5x9jxi5x9jxi.png]]

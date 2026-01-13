@@ -1,0 +1,17 @@
+{
+ "subject": "具体的人、物，包含外观特征", //主体
+ "composition": "x", //构图
+ "lighting": "x", //布光
+ "color_palette": "x", //色彩
+ "camera": "x", //镜头
+ "style": "胶片质感、CGI、写实、黑白",
+    //负向提示词
+    "negative_constraints": {
+        "Forbidden_Elements": [
+            "文字",
+            "水印",
+            "人物"
+        ],
+        "Style_Restrictions": "无卡通风格, 仅写实风格"
+    }
+}
