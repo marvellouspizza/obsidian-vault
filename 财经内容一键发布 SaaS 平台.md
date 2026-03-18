@@ -1,6 +1,6 @@
 
 ---
-## Slide 1｜封面
+## Slide 1｜概述
 
 **产品名称：** FinPost AI
 
